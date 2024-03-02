@@ -12,7 +12,7 @@ type grpcBookServer struct {
 	pb.UnimplementedBookServer
 }
 
-func (s grpcBookServer) GetBooks(ctx context.Context, request *pb.GetBookRequest) (*pb.GetBookResponse, error) {
+func (s grpcBookServer) GetBook(ctx context.Context, request *pb.GetBookRequest) (*pb.GetBookResponse, error) {
 	log.Info().Msg("GetBook function called")
 	return &pb.GetBookResponse{
 		Id:        "1",
